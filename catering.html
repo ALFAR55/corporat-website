@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<title>Natural Eat Catering</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Natural Eat Catering</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<head>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Welcome to our website, please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+</script>
+</head>
+
+<body onload="checkCookie()"></body>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="IMAGE/BUFFET4.jpg" alt="Buffet Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Natural Eat Catering</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="IMAGE/BUFFET1.jpg" class="w3-round w3-image w3-opacity-min" alt="Catering Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Our Service</h1><br>
+      <h5 class="w3-center">Healthy Food, Healthy Body!</h5>
+      <p class="w3-large">Natural Eat is a partnership business which has been founded in 2021 in Bandar Sungai Petani, Kedah. Natural Eat consist of 5 founder and will be launch in 2022. Natural Eat is a catering business that serve food and drink at large public events and even smaller private ones. Natural Eat is a service that delivers food to client’s location, and we also cook and serve it on site if our clients demands so.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">Our main service is to provide catering service to anyone who wants to hold an event, party, and celebration. Our service consists of setting up the tables, chairs, preparing food, clean-up dirty or discarded dishware, clean-up broken glasses, and politely accommodating the needs of all guests. we believe in our service and the foods we prepare can satisfy our customers since all of our foods are from organic sources, clean and guaranteed halal and nutritious to eat by anyone. We are also concerned with the health and feelings of our customers by asking about any foods they should not eat due to health or religious factors so we can exclude the menu from our services.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Package 1</h1><br>
+      <h4>Nasi Minyak</h4>
+      <p class="w3-text-grey">Bersama dengan air kordial disediakan</p><br>
+    
+      <h4>Ayam Masak Merah Bersama Gajus</h4>
+      <p class="w3-text-grey">Air teh tarik panas disediakan</p><br>
+    
+      <h4>Daging Masak Beriani</h4>
+      <p class="w3-text-grey">Disediakan bersama bubur kacang hijau dan pulut hitam</p><br>
+    
+      <h4>Dalca Sayuran</h4>
+      <p class="w3-text-grey">Air kopi O kampung disediakan</p><br>
+    
+      <h4>Acar Jelah + Papedom + Buah Tembikai + Oren</h4>
+      <p class="w3-text-grey">Didatangi satu jenis kuih manis dan satu jenis kuih pedas</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="IMAGE/NASI MINYAK2.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Package 2</h1><br>
+      <h4>Nasi Hujan Panas</h4>
+      <p class="w3-text-grey">Datang bersama papedom taj mahal</p><br>
+    
+      <h4>Ayam Madu Tiga</h4>
+      <p class="w3-text-grey">Datang bersama buah oren dan juga tembikai</p><br>
+    
+      <h4>Daging Gulai Kawah</h4>
+      <p class="w3-text-grey">Air kordial bersama air teh tarik</p><br>
+    
+      <h4>Dalca Sayuran</h4>
+      <p class="w3-text-grey">Air kopi O kampung bersama bubur kacang hijau atau pulut</p><br>
+    
+      <h4>Nenas Masak Senyum</h4>
+      <p class="w3-text-grey">satu jenis kuih pedas + satu jenis kuih manis</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="IMAGE/hujan panas.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Package 3</h1><br>
+      <h4>Nasi Beriani</h4>
+      <p class="w3-text-grey">Datang bersama papedom taj mahal</p><br>
+    
+      <h4>Ayam Goreng Serai</h4>
+      <p class="w3-text-grey">Datang bersama buah oren dan juga tembikai</p><br>
+    
+      <h4>Daging Masak Hitam</h4>
+      <p class="w3-text-grey">Air kordial bersama air teh tarik</p><br>
+    
+      <h4>Dalca Kurma</h4>
+      <p class="w3-text-grey">Air kopi O kampung bersama bubur kacang hijau atau pulut</p><br>
+    
+      <h4>Acar Rampai</h4>
+      <p class="w3-text-grey">satu jenis kuih pedas + satu jenis kuih manis</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="IMAGE/NASI-BERIANI.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+    </div>
+  </div>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Custom Menu</h2>
+
+<table>
+  <tr>
+    <th>Foods</th>
+    <th>Drinks</th>
+    <th>Desserts</th>
+  </tr>
+  <tr>
+    <th>Nasi</th>
+    <td>Teh O</td>
+    <td>Brownies</td>
+  </tr>
+  <tr>
+    <td>Nasi Putih</td>
+    <td>Teh Tarik</td>
+    <td>Kek Batik</td>
+  </tr>
+  <tr>
+    <td>Nasi Minyak</td>
+    <td>Milo</td>
+    <td>Cookies</td>
+  </tr>
+  <tr>
+    <td>Nasi Beriani</td>
+    <td>Jus Anggur</td>
+    <td>Gourmet</td>
+  </tr>
+  <tr>
+    <td>Nasi Hujan Panas</td>
+    <td>Jus Oren</td>
+    <td>Ais Krim</td>
+  </tr>
+  <tr>
+    <td>Nasi Tomato</td>
+    <td>Jus Tembikai</td>
+    <td>Mini Cheese Cake</td>
+  </tr>
+    <tr>
+    <th>Daging</th>
+    <td>Ice Lemon Tea</td>
+    <td>Pudding</td>
+      <tr>
+    <td>Daging Masak Hitam</td>
+    <td>Ice Lemon</td>
+    <td>Apple Pie</td>
+  </tr>
+    <tr>
+    <td>Daging Masak Kurma</td>
+    <td>Hot Chocolate</td>
+    <td>Apple Strudel</td>
+  </tr>
+    <tr>
+    <td>Rendang Daging</td>
+    <td>Susu Soya</td>
+    <td>Cream Puff</td>
+  </tr>
+    <tr>
+    <td>Daging Masak Kari</td>
+    <td>Jus Apple</td>
+    <td>Popia Kering/Basah</td>
+  </tr>
+    <tr>
+    <td>Gulai Kawah</td>
+    <td>Sirap Bandung</td>
+    <td>Seri Muka</td>
+  </tr>
+      <th>Ayam</th>
+    <td>Sirap Limau</td>
+    <td>Cendol</td>
+      <tr>
+    <td>Ayam Panggang</td>
+    <td>Air Jagung</td>
+    <td>Jelly Buah-buahan</td>
+  </tr>
+    <tr>
+    <td>Ayam Masak Merah</td>
+    <td>Kopi</td>
+    <td>Kuih Lapis</td>
+  </tr>
+    <tr>
+    <td>Ayam Goreng Berempah</td>
+    <td>Soda</td>
+    <td>Tepung Pelita</td>
+  </tr>
+    <tr>
+    <td>Ayam Masak Merah</td>
+    <td>Sirap Laici</td>
+    <td>Macarons</td>
+  </tr>
+    <tr>
+    <td>Ayam Masak Kurma</td>
+    <td>Jus Laici</td>
+    <td>Kek Coklat</td>
+  </tr>
+      <th>Sayur</th>
+    <td>Jus Nenas</td>
+    <td>Kek Strawberry</td>
+      <tr>
+    <td>Dalca Daging</td>
+    <td>Expresso</td>
+    <td>Kuih Apam</td>
+  </tr>
+    <tr>
+    <td>Dalca Ayam</td>
+    <td>Latte</td>
+    <td>French Toast</td>
+  </tr>
+    <tr>
+    <td>Dalca Sayur</td>
+    <td>Green Tea</td>
+    <td>Kek Ais-Krim</td>
+  </tr>
+    <tr>
+    <td>Acar Timun</td>
+    <td>Sparkling Water</td>
+    <td>Cheese Tart</td>
+  </tr>
+    <tr>
+    <td>Acar Buah</td>
+    <td>Susu</td>
+    <td>Cupcake</td>
+  </tr>
+  </tr>
+</table>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact</h1><br>
+    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggest criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Catering Service, Kampong Sungai Pasir, 08000 Sungai Petani, Kedah. </b></p>
+    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+</footer>
+
+</body>
+</html>
